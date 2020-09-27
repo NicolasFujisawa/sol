@@ -28,4 +28,13 @@ public class Utils {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }
+    public static String[] readStringArray(int length) {
+        System.out.println(MessageFormat.format("array of string length {0}:", length));
+        String[] array = new String[length];
+        Scanner scanner = new Scanner(System.in);
+        for(int i = 0; i < length; ++i) {
+            array[i] = scanner.next();
+        }
+        return array;
+    }
 }

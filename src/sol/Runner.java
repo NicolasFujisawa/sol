@@ -7,10 +7,10 @@ public class Runner {
     protected static void run() {
         Solution solution = new Solution();
 
-        int[] array = Utils.readArray(3);
-        int duration = Utils.readInt();
-
-        int answer = solution.findPoisonedDuration(array, duration);
+        int[] customers = Utils.readArray(2);
+        int boardingCost = Utils.readInt();
+        int runningCost = Utils.readInt();
+        int answer = solution.minOperationsMaxProfit(customers, boardingCost, runningCost);
         System.out.println(MessageFormat.format("result:\n{0}",answer));
     }
 }
