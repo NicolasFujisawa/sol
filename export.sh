@@ -1,1 +1,3 @@
-cp ./src/sol/Solution.java ./src/leetcode/Solution.java
+mkdir -p ../leetcode
+
+cp src/sol/Solution.java ../leetcode/Leetcode.java

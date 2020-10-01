@@ -1,16 +1,24 @@
 package sol;
 
 
-import java.text.MessageFormat;
+import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Runner {
+    private static final Logger LOGGER = Logger.getLogger( Runner.class.getName() );
+
+    private Runner() {
+        throw new IllegalStateException("Utility class");
+    }
+
     protected static void run() {
         Solution solution = new Solution();
 
-        int[] customers = Utils.readArray(2);
-        int boardingCost = Utils.readInt();
-        int runningCost = Utils.readInt();
-        int answer = solution.minOperationsMaxProfit(customers, boardingCost, runningCost);
-        System.out.println(MessageFormat.format("result:\n{0}",answer));
+        int[] nums = Utils.readArray(3);
+        LOGGER.log(Level.INFO, "random array {0}",Arrays.toString(nums));
+
+        int answer = solution.firstMissingPositive(nums);
+        LOGGER.log(Level.INFO, "result {0}", answer);
     }
 }
